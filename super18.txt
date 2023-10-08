@@ -1,0 +1,14 @@
+count=1
+while [ $count -le 5 ]
+do
+echo "Enter name $count"
+read name
+len=${#name}
+if [ $len -lt 10 ]
+then
+echo "$name">>demo
+fi
+count=$[ $count+1 ]
+done
+echo "The name whose length is less than 10 are :"
+cat demo
